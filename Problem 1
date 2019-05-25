@@ -1,0 +1,120 @@
+//Problem1
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+	void addition ()
+	{
+		int n1, n2, s;
+		cout << "Enter your two numbers: ";
+		cin >> n1 >> n2;
+		s = n1 + n2;
+		cout << "Sum is " << s << endl;
+		
+		return;
+	}
+	
+	void subtraction ()
+	{
+		int n1, n2, result;
+		cout << "Enter your two numbers: ";
+		cin >> n1 >> n2;
+		result = n1 - n2;
+		cout << "The difference is " << result <<endl;
+		
+		return;
+	}
+	
+	void product ()
+	{
+		int n1, n2, result;
+		cout << "Enter your two numbers: ";
+		cin >> n1 >> n2;
+		result = n1 * n2;
+		cout << "The product is " << result <<endl;
+		return;
+	}
+	
+	void quotient ()
+	{
+		int n1, n2;
+		float result;
+		cout << "Enter your two numbers: ";
+		cin >> n1 >> n2;
+		result = n1 / n2;
+		cout << "The quotient is " << result <<endl;
+		
+		return;
+	}
+	
+	void modu ()
+	{
+		int num1, num2;
+		float result;
+		cout << "Enter your two numbers: ";
+		cin >> num1 >> num2;
+		result = num1 % num2;
+		cout << "The remainder is " << result <<endl;
+		
+		return;
+	}
+
+
+int main()
+{
+	int choice;
+	char con;
+	
+	cout<<"MENU:"<<endl;
+	cout<<"     1. Add"<<endl;
+	cout<<"     2. Subtract"<<endl;
+	cout<<"     3. Multiply"<<endl;
+	cout<<"     4. Divide"<<endl;
+	cout<<"     5. Modulus"<<endl;
+	
+	do
+	{
+		cout << "Enter your choice: " << endl;
+		cin >> choice;
+			
+			switch (choice)
+			{
+				case 1:
+					addition ();
+				break;
+		
+				case 2:
+					subtraction ();
+				break;
+		
+				case 3:
+					product ();
+				break;
+		
+				case 4:
+					quotient ();
+				break;
+		
+				case 5:
+					modu ();
+				break;
+		
+				default:
+				cout << "Invalid Input!";
+			}
+		
+		cout << "\nPress 'Y' to continue: ";
+		cin >> con;
+		
+		cout <<" " << endl;
+		
+	} while(con=='y' || con=='Y');
+	cout << "End of program." << endl;
+	
+	_getch();
+	return 0;
+	
+}
