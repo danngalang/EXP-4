@@ -1,0 +1,47 @@
+//Problem2
+#include<iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	int size, arr[5], q, w, e;
+	cout << "Selection sorting .... \n";
+	cout << "Enter array size: "; 
+	cin >> size;  
+	cout << "Enter the " << size << " elements: \n";
+	cout << "\n";
+	for(q = 0; q < size; q++)
+	{
+		cin >> arr[q];
+	} 
+	cout << "\n";
+	cout << "Your data: ";
+	for(int q = 0; q < size; q++)
+        {
+            cout << arr[q] <<" ";
+       }
+	
+	for (q = 0; q < size; q++)
+	{
+		for(w = q + 1; w < size ; w++)
+		{
+			if(arr[q] > arr[w])
+			{
+				e = arr[q];
+				arr[q] = arr[w];
+				arr[w] = e;
+			}
+		}
+	}
+	cout << "\n";
+	cout << "\nAfter using selection sort...\n";
+	cout << "\n";
+	cout << "Sorted data is :";
+	for(q = 0; q < size; q++)
+	{
+		cout << arr[q] << " ";
+	}
+	_getch ();
+	return 0;
+}
